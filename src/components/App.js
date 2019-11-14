@@ -1,6 +1,6 @@
 import React from 'react';
 import { TopNavBar } from "./TopNavBar"
-import '../styles/App.css';
+
 
 function App() {
   return (
