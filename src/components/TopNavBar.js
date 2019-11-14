@@ -1,4 +1,4 @@
-import logo from "./nba-logoman-word-white.svg"
+import logo from "../assets/images/nba-logoman-word-white.svg"
 import React from "react"
 
 export function TopNavBar(props) {
