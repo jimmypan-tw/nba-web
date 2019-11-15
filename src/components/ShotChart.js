@@ -15,7 +15,15 @@ export class ShotChart extends React.Component {
         chartType: PropTypes.string.isRequired,
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
+        this.update()
+    }
+
+    componentDidUpdate(){
+        this.update()
+    }
+
+    update = () => {
         nba.stats.shots({
             PlayerID: this.props.playerId
         }).then((response) => {
