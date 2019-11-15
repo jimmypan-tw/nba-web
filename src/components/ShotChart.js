@@ -12,7 +12,7 @@ export class ShotChart extends React.Component {
         playerId: PropTypes.number.isRequired,
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
         nba.stats.shots({
             PlayerID: this.props.playerId
         }).then((response) => {
