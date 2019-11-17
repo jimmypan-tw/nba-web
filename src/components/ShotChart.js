@@ -20,10 +20,12 @@ export class ShotChart extends React.Component {
     }
 
     componentDidUpdate(){
+        console.log('componentDidUpdate')
         this.update()
     }
 
     update = () => {
+        // 打API, 再從API的response(是一個promise)去作render
         nba.stats.shots({
             PlayerID: this.props.playerId
         }).then((response) => {
@@ -36,6 +38,8 @@ export class ShotChart extends React.Component {
             }));
 
             const courtSelection = d3.select("#shot-chart");
+            courtSelection.html('')
+
             const chart_court = court().width(500);
             const chart_shots = shots()
                 .shotRenderThreshold(this.props.minCount)
@@ -46,7 +50,7 @@ export class ShotChart extends React.Component {
         });
     }
     render() {
-        console.log('shot-chart-render')
+
         return (
             <div id="shot-chart"></div>
         );
