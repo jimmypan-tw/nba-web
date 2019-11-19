@@ -8,7 +8,6 @@ import { DEFAULT_PLAYER_INFO } from "../constants"
 
 export class Main extends React.Component {
     state = {
-        playerId: nba.findPlayer('Stephen Curry').playerId,
         playerInfo: DEFAULT_PLAYER_INFO,
     }
     componentDidMount() {
