@@ -34,7 +34,7 @@ export class Main extends React.Component {
                 <SearchBar handleSelectPlayer={this.handleSelectPlayer}/>
                 <div className="player">
                     <Profile playerInfo={this.state.playerInfo}/>
-                    <DataViewContainer playerId={this.state.playerId} />
+                    <DataViewContainer playerId={this.state.playerInfo.playerId} />
                 </div>
             </div>
         )
